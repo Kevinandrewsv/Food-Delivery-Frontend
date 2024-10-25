@@ -1,0 +1,237 @@
+/* General Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and title */
+}
+
+.logo {
+  width: 120px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(238, 196, 24, 0.6)); /* Yellow glow */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+  filter: drop-shadow(0 0 12px rgba(238, 196, 24, 0.8)); /* Brighter glow */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  background: linear-gradient(45deg, #eec418, #ff7f50); /* Gradient colors */
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* For Safari and older versions of Chrome */
+  color: transparent; /* Make the text itself transparent to show the gradient */
+  transition: color 0.3s ease, transform 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(238, 196, 24, 0.4)); /* Soft shadow */
+}
+
+.title:hover {
+  color: #eec418; /* Optional solid color on hover */
+  transform: scale(1.05); /* Slight scale up */
+}
+
+/* Animation on hover for a dynamic effect */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+.logo:hover {
+  animation: wiggle 0.3s ease;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #eec418; /* Tomato color */
+}
+
+.navbar-menu .active {
+  color: #eec418;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-right i {
+  font-size: 18px;
+}
+
+.dot {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #eec418; /* Bright red-orange for visibility */
+  border-radius: 50%;
+  border: 2px solid white; /* White border to make it stand out */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.search-input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-btn {
+  margin-left: 5px;
+  padding: 5px 10px;
+  background-color: #eec418;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar-search-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+button {
+  background-color: #eec418;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #eec418;
+}
+
+.fa-bars {
+  display: none; /* Hide by default */
+}
+
+/* Media Queries and Dropdown Menu for Mobile */
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden initially */
+    height: 100%;
+    width: 250px;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 50px 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    z-index: 10;
+  }
+
+  .navbar-menu.open {
+    right: 0; /* Slide in the menu */
+  }
+
+  .navbar-menu a {
+    padding: 10px 0;
+    font-size: 20px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .fa-bars {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  /* Optionally, hide the menu links in mobile view to rely on the hamburger */
+  .navbar-menu {
+    display: none; /* Hide by default */
+  }
+
+  .navbar-menu.open {
+    display: flex; /* Show menu when it's opened (on mobile) */
+  }
+  button {
+    padding: 6px 12px;
+  }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+  .title {
+    display: none; /* Hide the title for very small screens */
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .navbar-menu a {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 5px 10px;
+  }
+}

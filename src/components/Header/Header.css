@@ -1,0 +1,115 @@
+/* Header Container */
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url('/header_img.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px; /* Smooth corner radius */
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Adds depth with shadow */
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .header:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); /* More pronounced shadow on hover */
+  }
+  
+  /* Header Contents */
+  .header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  /* Header Title */
+  .header-contents h2 {
+    font-weight: 600; /* Slightly bolder */
+    color: rgb(255, 255, 255);
+    font-size: max(5vw, 24px);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Glowing text effect */
+    line-height: 1.2; /* Improved spacing */
+    letter-spacing: 0.05em; /* Slightly spaced out letters for readability */
+  }
+  
+  /* Header Text */
+  .header-contents p {
+    color: rgba(255, 255, 255, 0.85); /* Slightly transparent text */
+    font-size: 1.2vw;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+  }
+  
+  /* Call-to-Action Button */
+  .header-contents a {
+    border: none;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6347, #eec418); /* Vibrant gradient */
+    padding: 1vw 2.5vw;
+    font-size: max(1vw, 13px);
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase; /* Makes button text more prominent */
+  }
+  
+  .header-contents a:hover {
+    background: linear-gradient(135deg, #ff4500, #eec418); /* Darker gradient on hover */
+    box-shadow: 0 6px 15px rgba(255, 99, 71, 0.5); /* Button shadow for hover */
+  }
+  
+  /* Responsive Design */
+  
+  /* For medium screens */
+  @media (max-width: 1050px) {
+    .header {
+      height: 38vw;
+    }
+  
+    .header-contents {
+      max-width: 45%;
+    }
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 750px) {
+    .header {
+      height: 45vw;
+      background-size: cover;
+    }
+  
+    .header-contents {
+      max-width: 55%;
+      gap: 2vw;
+    }
+  
+    .header-contents p {
+      display: none;
+    }
+  
+    .header-contents a {
+      padding: 2vw 4vw;
+    }
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

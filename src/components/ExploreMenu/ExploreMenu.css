@@ -1,0 +1,133 @@
+/* Explore Menu Container */
+.explore-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 0;
+    background-color: #f8f9fa; /* Soft background to differentiate the section */
+    border-radius: 15px; /* Rounded corners for a smooth look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center;
+  }
+  
+  /* Explore Menu Title */
+  .explore-menu h1 {
+    color: #333;
+    font-weight: 600;
+    font-size: 2.5vw;
+    letter-spacing: 1px; /* Slight letter spacing for elegance */
+    text-transform: capitalize; /* Consistent capitalization */
+    margin-bottom: 10px;
+  }
+  
+  /* Explore Menu Description */
+  .explore-menu-text {
+    max-width: 60%;
+    color: #666;
+    font-size: 1.2vw;
+    line-height: 1.6;
+    margin: 0 auto; /* Center the text */
+  }
+  
+  /* Explore Menu List (scrollable items) */
+  .explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: scroll;
+    padding: 20px 0;
+    scroll-behavior: smooth; /* Smooth scroll */
+  }
+  
+  .explore-menu-list::-webkit-scrollbar {
+    display: none; /* Hides scrollbar */
+  }
+  
+  /* Explore Menu List Items */
+  .explore-menu-list-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Images inside items */
+  .explore-menu-list-item img {
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .explore-menu-list-item:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow intensifies on hover */
+  }
+  
+  /* Active item */
+  .explore-menu-list-item .active {
+    border: 4px solid #eec418; /* Golden border for active state */
+    padding: 2px;
+    box-shadow: 0 0 10px rgba(238, 196, 24, 0.5); /* Golden glow around active item */
+  }
+  
+  /* Item description text */
+  .explore-menu-list-item p {
+    margin-top: 10px;
+    color: #333;
+    font-size: max(1.4vw, 16px);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .explore-menu-list-item:hover p {
+    color: #eec418; /* Text color change on hover */
+  }
+  
+  /* Separator Line */
+  .explore-menu hr {
+    margin: 10px 0px;
+    height: 2px;
+    background-color: #E2E2E2;
+    border: none;
+  }
+  
+  /* Media Queries for responsive design */
+  
+  /* For medium screens */
+  @media (max-width: 1050px) {
+    .explore-menu-text {
+      max-width: 100%;
+      font-size: 14px;
+    }
+  
+    .explore-menu h1 {
+      font-size: 5vw;
+    }
+    
+    .explore-menu-list-item img {
+      width: 10vw;
+    }
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 750px) {
+    .explore-menu h1 {
+      font-size: 6vw;
+    }
+  
+    .explore-menu-list-item img {
+      width: 12vw;
+    }
+  
+    .explore-menu-text {
+      font-size: 12px;
+    }
+  
+    .explore-menu-list-item p {
+      font-size: 14px;
+    }
+  }
+  

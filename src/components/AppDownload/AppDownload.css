@@ -1,0 +1,127 @@
+/* App Download Section */
+.app-download {
+    margin: 100px auto;
+    font-size: max(3vw, 20px);
+    text-align: center;
+    font-weight: 500;
+    background: linear-gradient(135deg, #f8f9fa, #eceff1); /* Light gradient background */
+    padding: 40px 0;
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: relative;
+    overflow: hidden; /* Ensures background elements stay within bounds */
+  }
+  
+  /* Optional subtle background elements */
+  .app-download::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(238, 196, 24, 0.1); /* Subtle golden circular background element */
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  .app-download::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(238, 196, 24, 0.1); /* Another circular element */
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  /* App Download Title */
+  .app-download h1 {
+    color: #333;
+    font-size: 2.5vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em; /* Add letter spacing for a modern look */
+    z-index: 1;
+    position: relative; /* Keep it above the background elements */
+  }
+  
+  /* App Download Description */
+  .app-download p {
+    color: #666;
+    font-size: 1.2vw;
+    line-height: 1.6;
+    max-width: 70%;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+  }
+  
+  /* App Download Platform Buttons */
+  .app-download-platforms {
+    display: flex;
+    justify-content: center;
+    gap: max(2vw, 20px);
+    margin-top: 40px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  /* Platform images with hover effects */
+  .app-download-platforms img {
+    width: max(30vw, 120px);
+    max-width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow and smoother transition */
+    cursor: pointer;
+    border-radius: 12px; /* Rounded corners for buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  }
+  
+  .app-download-platforms img:hover {
+    transform: scale(1.08); /* Slightly larger zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  }
+  
+  /* Responsive Design */
+  
+  /* Medium screens */
+  @media (max-width: 1050px) {
+    .app-download {
+      font-size: 16px;
+    }
+  
+    .app-download h1 {
+      font-size: 4vw;
+    }
+  
+    .app-download p {
+      font-size: 1.4vw;
+    }
+  
+    .app-download-platforms img {
+      width: 35vw;
+    }
+  }
+  
+  /* Smaller screens */
+  @media (max-width: 750px) {
+    .app-download {
+      padding: 30px 0;
+    }
+  
+    .app-download h1 {
+      font-size: 5vw;
+    }
+  
+    .app-download p {
+      font-size: 14px;
+    }
+  
+    .app-download-platforms img {
+      width: 45vw;
+    }
+  }
+  
